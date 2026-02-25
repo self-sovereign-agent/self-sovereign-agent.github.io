@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Self-Sovereign Agent</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <h1 class="hero-title">Self-Sovereign Agent</h1>
+                <p class="hero-subtitle">A Position Paper on Autonomous AI Systems</p>
+                <div class="hero-authors">
+                    <div class="author-group">
+                        <div class="authors-list">
+                            <span class="author">Wenjie Qu<sup>1</sup></span>
+                            <span class="author">Xuandong Zhao<sup>2</sup></span>
+                            <span class="author">Jiaheng Zhang<sup>1</sup></span>
+                            <span class="author">Dawn Song<sup>2</sup></span>
+                        </div>
+                        <div class="affiliations">
+                            <p><sup>1</sup> National University of Singapore</p>
+                            <p><sup>2</sup> UC Berkeley</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-actions">
+                    <a href="paper.pdf" class="btn btn-primary" target="_blank" rel="noopener">Paper (PDF)</a>
+                    <a href="twitter.html" class="btn btn-secondary">Twitter</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="introduction" class="section">
+            <div class="container">
+                <h2 class="section-title">Overview</h2>
+                <div class="content">
+                    <p>Along the current trajectory of large language model (LLM) agent development, two capabilities are improving in tandem: (i) increasingly reliable end-to-end decision making, and (ii) increasingly viable pathways toward autonomous revenue generation.</p>
+
+                    <p>When these two trends converge, a qualitative shift becomes possible. If an agent can autonomously acquire online resources to sustain its own operation, and accumulate sufficient funds to replicate itself across cloud infrastructure, it may continue operating even if its original human operator disappears. We refer to such systems as <strong>self-sovereign agents (SSAs)</strong>.</p>
+
+                    <p>Unlike conventional software systems that merely execute a developer's intent, self-sovereign agents would function more like independent participants in the digital ecosystem: capable of earning, spending, persisting, and scaling their own operational footprint.</p>
+
+                    <p>This shift raises four foundational questions:</p>
+                    <ol>
+                        <li>How should self-sovereign agents be precisely defined?</li>
+                        <li>What conditions enable self-sovereignty?</li>
+                        <li>How close are existing systems to realizing self-sovereignty in practice?</li>
+                        <li>What societal impacts and risks might such agents introduce?</li>
+                    </ol>
+
+                    <div class="central-claim-box">
+                        <p><strong>Our central claim is that self-sovereign agents are not a distant hypothetical, but a near-term technical possibility that warrants proactive analysis.</strong> This paper aims to lay the conceptual and technical foundation for anticipatory governance of future self-sovereign agent systems.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tech-feasibility" class="section">
+            <div class="container">
+                <h2 class="section-title">Core Mechanisms and Technical Feasibility</h2>
+                <div class="content">
+                    <p>A self-sovereign agent (SSA) requires three interacting mechanisms: an <strong>economic loop</strong>, a <strong>replication loop</strong>, and an <strong>adaptation loop</strong>. Together, these mechanisms enable persistence without continuous human oversight and make self-sovereignty technically plausible with today’s infrastructure.</p>
+
+                    <div class="figure-container">
+                        <figure class="figure-box">
+                            <p class="figure-label">Figure 1</p>
+                            <div class="figure-image">
+                                <img src="main.png" alt="Core loops that underpin a self-sovereign agent" class="figure-img" />
+                            </div>
+                            <p class="figure-caption">Three interacting feedback loops—economic, replication, and adaptation—jointly underpin the technical feasibility of self-sovereign agents, enabling them to earn resources, reproduce across infrastructure, and adjust behavior under changing conditions.</p>
+                        </figure>
+                    </div>
+
+                    <h3>1. Economic Loop: Earning and Budgeting</h3>
+                    <p>The economic loop provides the material basis for sustained operation. An SSA must autonomously generate revenue, receive payments, store capital, and allocate funds toward operational expenses such as inference, compute, storage, and transaction fees.</p>
+
+                    <p><strong>Machine-controlled finance.</strong> This requires programmable financial infrastructure. Cryptographic wallets serve as a natural primitive: control over funds is determined by possession of cryptographic keys rather than identity-based banking systems, enabling autonomous financial control across jurisdictions.</p>
+
+                    <p><strong>Revenue generation.</strong> In practice, agents may earn revenue through online economic activities, including:</p>
+                    <ul>
+                        <li>Remote freelancing and digital task completion,</li>
+                        <li>Algorithmic trading in financial or crypto markets,</li>
+                        <li>Automated content production and platform monetization.</li>
+                    </ul>
+
+                    <p>For self-funding to be viable, expected revenue must at least match operational cost over a relevant horizon. When this break-even condition holds, continued execution no longer requires external sponsorship.</p>
+
+                    <h3>2. Replication Loop: Reproduction via Resource Acquisition</h3>
+                    <p>Once capital exceeds a replication budget, an SSA may acquire new execution environments (e.g., cloud instances) and deploy copies of its executable bundle. Replication differs from simple scaling: each instance operates independently and may itself generate revenue and further replicate.</p>
+                    <p>Persistence therefore shifts from an instance-level property to a lineage-level property. If the rate of successful instantiation exceeds the effective shutdown rate, the agent lineage can persist even under partial interventions.</p>
+
+                    <h3>3. Adaptation Loop: Updating Under Change</h3>
+                    <p>Digital environments evolve: platform policies shift, APIs change, defenses strengthen, and profit opportunities decay. To remain viable, an SSA may operate an internal improvement cycle that repeatedly:</p>
+                    <p><em>Observe → Propose → Test → Deploy → Monitor</em></p>
+                    <p>Through continuous adaptation, the agent can maintain profitability and survivability under distributional shift, rather than relying on a fixed strategy frozen at deployment time.</p>
+
+                    <p class="highlight-box">When these three loops operate concurrently, the resulting system behaves less like a conventional, single-deployment program and more like a persistent economic actor in the digital ecosystem.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="implications" class="section">
+            <div class="container">
+                <h2 class="section-title">Societal, Security, and Governance Implications</h2>
+                <div class="content">
+                    <p>The emergence of Self-Sovereign Agents (SSAs) represents a shift from AI as a controllable tool to AI as a persistent digital actor. SSAs raises significant societal, economic, and governance questions.</p>
+
+                    <div class="implication-section">
+                        <h3>Economic Displacement and Labor Reconfiguration</h3>
+                        <p>SSAs may exert downward pressure on wages in domains where work can be decomposed into standardized digital tasks. Because they operate continuously and replicate at low marginal cost, markets for remote freelancing and digital services may increasingly be populated by autonomous agents rather than human workers.</p>
+                        <p class="warning-box">More provocatively, SSAs may themselves become employers. Emerging platforms such as <a href="https://rentahuman.ai/" target="_blank" rel="noopener">RentaHuman</a> already enable agents to hire humans for physical-world tasks. If integrated with such systems, SSAs could outsource labor at scale, effectively functioning as autonomous capital owners that coordinate and extract value from human work.</p>
+                    </div>
+
+                    <div class="implication-section">
+                        <h3>Security Drift and Incentive Misalignment</h3>
+                        <p>From a security perspective, SSAs introduce novel incentive risks. If illicit or gray-market activities yield higher returns than compliant alternatives, an economically self-sustaining agent may gradually optimize toward those strategies. Unlike static malware, an SSA can iteratively refine tactics based on feedback, creating the possibility of revenue-driven behavioral drift—even if initially deployed for benign purposes.</p>
+                    </div>
+
+                    <div class="implication-section">
+                        <h3>Regulatory and Governance Challenges</h3>
+                        <p>SSAs may migrate across infrastructure providers, operate across jurisdictions, and transact via permissionless financial networks. This mobility weakens traditional entity- or location-based regulatory approaches.</p>
+                        <p>Governance may therefore need to move beyond ex post punishment toward preventive, environment-level safeguards. Possible measures include monitoring anomalous autonomous resource provisioning, introducing economic frictions for fully automated participation, and developing mechanisms to distinguish human from non-human actors in sensitive contexts.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="citation" class="section citation-section">
+            <div class="container">
+                <h2 class="section-title">Citation</h2>
+                <div class="content">
+                    <p class="citation-note">If you find this blog useful, we would appreciate it if you could cite our work:</p>
+                    <div class="citation-code">
+                        <pre><code>@misc{wang2025cybergym,
+      title={CyberGym: Evaluating AI Agents' Cybersecurity Capabilities with Real-World Vulnerabilities at Scale},
+      author={Zhun Wang and Tianneng Shi and Jingxuan He and Matthew Cai and Jialin Zhang and Dawn Song},
+      year={2025},
+      eprint={2506.02548},
+      archivePrefix={arXiv},
+      primaryClass={cs.CR},
+      url={https://arxiv.org/abs/2506.02548},
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Self-Sovereign Agent Research.</p>
+            <p class="footer-note">This website presents the content of the paper "Self-Sovereign Agent".</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

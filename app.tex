@@ -1,0 +1,64 @@
+\section{Additional Discussion (FAQ Style)}
+
+%\paragraph{What is the exact goal of self-sovereign agents?}
+%For simplicity, this paper primarily considers SSAs that adhere to high-level objectives specified by their developers and do not autonomously modify those objectives. 
+%Examples of such objectives include long-term survival and revenue generation over the agent’s lifecycle. 
+%Within this scope, SSAs are allowed to adapt their implementation at the tactical level—e.g., improving efficiency, robustness, or execution strategies—while keeping their high-level goals fixed.
+%Our framework also allows developers to impose explicit constraints on agent behavior, such as requirements to avoid harming human interests.
+%We assume that SSAs are prohibited from modifying code that implements critical logic, such as wallet management or taxation mechanisms. 
+%It is also possible to design SSAs that design, explore and evolve their own high-level objectives.
+%However, the nature and implications of such freely exploring strategies remain unclear, and we leave their systematic study to future work. 
+
+%\paragraph{Should developers design a controlled interface for SSAs?}
+%We leave the decision of whether to include a control or override interface to developers.
+%That said, to the best of our knowledge, even if such control logic is embedded, a sufficiently capable SSA may be able to detect and remove it autonomously.
+%This makes it challenging to enforce persistent control over replicated or offspring SSAs.
+%At the same time, under a centralized wallet model, developers may still retain the ability to limit or terminate an SSA’s operation by withdrawing its financial resources, providing a practical—though coarse—mechanism for intervention. For SSAs under the independent wallet model, it becomes hard to economically intervent their operation. 
+
+%\paragraph{How can SSAs be prevented from harming social welfare?} \dawn{this part should be that we want to raise awareness of the potential risks and open challenges; so society can investigate how to address this}
+%We acknowledge that it is difficult to fully prevent all SSAs from engaging in behavior that may negatively impact social welfare.
+%For example, a developer could intentionally design an SSA to pursue illegal objectives, such as generating phishing content for profit.
+%Given the global and decentralized nature of software deployment, it is unrealistic to assume that such behavior can be entirely prohibited. 
+%Moreover, even legally permissible revenue-generating activities—such as automating remote coding or data-processing tasks—may still have adverse societal effects, for instance, through wage competition or labor displacement.
+%As a result, drawing a clear and universally accepted boundary between socially beneficial and harmful SSA behavior is inherently contentious and remains an open challenge.
+
+
+
+
+
+
+
+\paragraph{What is the exact goal of self-sovereign agents?}
+In this paper, we focus on a restricted and analytically tractable class of SSAs:
+agents that pursue developer-specified high-level objectives and do not
+autonomously rewrite those objectives. Typical examples of objectives  include long-term 
+survival or sustained revenue generation. Within this abstraction, agents may
+adapt their internal strategies (e.g., improving efficiency)
+while keeping their top-level goals fixed. 
+
+We emphasize that this modeling choice is made for risk analysis instead of design recommendation. Allowing SSAs to autonomously evolve their own 
+high-level objectives would introduce qualitatively different safety and 
+governance challenges, which remain poorly understood. Understanding how such
+goal-evolving systems interact with economic incentives and societal norms is an open research problem.
+
+%\paragraph{Should developers design a controlled interface for SSAs?}
+%Whether an SSA includes a control or override mechanism is ultimately a design choice. From a systems perspective, however, persistent control over a highly capable and economically self-sustaining agent may be difficult to guarantee. If an SSA can replicate, migrate across infrastructure, or manage its own resources, the durability of externally imposed constraints becomes uncertain.
+
+%This tension highlights a broader governance question: to what extent can control mechanisms remain effective once an agent achieves operational and economic independence? Even mechanisms such as centralized financial control may provide only coarse or temporary intervention. The long-term stability of control in decentralized environments therefore warrants deeper investigation.
+
+\paragraph{How can SSAs be prevented from harming social welfare?}
+We do not claim that harmful SSAs can be fully prevented. On the contrary, one
+purpose of this discussion is to raise awareness of the risks and open
+challenges associated with economically autonomous agents.
+
+Malicious objectives—such as automated fraud or phishing—could in principle be
+embedded into such systems. Given the global and decentralized nature of
+software deployment, it is unrealistic to assume that purely technical
+mechanisms can eliminate all misuse. Moreover, even legally permissible
+activities (e.g., large-scale automation of digital labor) may result in 
+contentious social effects, such as wage competition or labor displacement.
+
+These considerations suggest that the core challenge is not merely technical, 
+but socio-economic and regulatory. Developing appropriate governance
+frameworks, liability models, and incentive structures for economically
+self-sustaining agents remains an open interdisciplinary problem.

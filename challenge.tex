@@ -1,0 +1,31 @@
+\section{Current Challenges}
+\label{sec:challenge}
+
+
+%These results indicate that, at present, agent performance on economically meaningful work remains brittle, especially when tasks span long horizons or involve multiple interdependent steps. Consequently, deploying agents that can reliably earn and sustain income without oversight remains difficult.  
+
+Although recent progress in LLMs has substantially improved agentic capabilities, achieving \emph{robust} economic self-sufficiency without external intervention remains difficult. Agents can often complete isolated tasks effectively, but there is still limited evidence that they can function as economically autonomous entities over extended periods in realistic environments.
+
+\paragraph{Evidence Gap in Realistic Economic Workflows.}
+Recent empirical evaluations suggest that current LLM-based agents struggle to consistently generate economic value when workflows require extended interaction, coordination, and iterative refinement. Benchmarks designed to approximate real-world labor settings, such as the Remote Labor Index (RLI)~\cite{mazeika2025remote}, indicate that even state-of-the-art agents (e.g., Manus~\cite{manus}) achieve low success rates on end-to-end, freelance-style workflows (e.g., 2.5\% in reported settings)~\cite{mazeika2025remote}. While agents perform strongly on narrower tasks such as code generation, they frequently fail to deliver complete, high-quality outputs that meet professional standards in more complex domains (e.g., 3D modeling and architectural design)~\cite{mazeika2025remote}.
+
+\paragraph{Lack of Profit-Aware Evaluation.} 
+A further obstacle to assessing economic self-sufficiency is the lack of comprehensive benchmarks that jointly measure both \emph{revenue} and \emph{operational cost}. In practice, an agent may successfully complete a task yet still incur substantial token and tool-use expenses, making profitability highly sensitive to pricing and execution efficiency. Two opposing trends therefore matter simultaneously: on the one hand, advanced agent frameworks such as OpenClaw can be extremely token-intensive and costly to run; on the other hand, inference and deployment costs are dropping rapidly, with some systems (e.g., MiniMax M2.5~\cite{minimax}) reporting very low hourly operating costs (e.g., about one dollar per hour under certain configurations). Given these dynamics, an important direction for future work is to develop benchmarks that evaluate agents' economic sustainability under realistic market conditions. 
+
+\paragraph{Long-Horizon Reliability Remains Challenging.}
+A central technical bottleneck is reliability over long execution horizons. Realistic economic workflows require agents to maintain intent, intermediate assumptions, and constraints across many steps. However, current agents often condition on their own prior outputs, making them vulnerable to error accumulation. Small inaccuracies or hallucinations introduced early can propagate through subsequent steps, gradually degrading performance and leading to incomplete or incorrect outcomes. While these failures may be rare in short-horizon evaluations, they become increasingly consequential as task complexity and duration grow---a common feature of real-world revenue-generating work.
+
+\paragraph{Challenges in Autonomous Adaptation.}
+Finally, sustained economic operation likely requires agents to adapt over time, yet reliable autonomous self-modification remains difficult. Updating internal memory, prompts, or strategies without introducing regressions, inconsistencies, or distribution shift is still an open problem. In practice, self-improvement attempts can degrade previously solved behaviors, making long-term stability and safety hard to maintain.
+
+Overall, while LLM capabilities are advancing rapidly, the path to economically self-sustaining agents remains constrained by barriers that are not resolved by scaling alone. These barriers include long-horizon reliability, the absence of objective grounding in open-world settings, and the inherent instability of self-modifying systems.
+
+
+%\subsection{Narrow and Fragile Economic Behaviors}
+
+%Existing attempts at building self-sovereign agents, such as Truth Terminal~\cite{truthterminal}, typically rely on highly constrained revenue mechanisms, for example, issuing their own tokens and operating a single social-media account to attract attention. These approaches reduce the need for complex interaction and long-term planning, but they do not yet demonstrate general or robust economic autonomy. Moreover, such revenue strategies are tightly coupled to specific online platforms, and can be easily disrupted by account suspension or policy changes. 
+
+%More interactive and adaptive economic behaviors, such as negotiation, iterative client feedback, or long-running project execution, remain difficult for current agents to sustain reliably. This suggests that broader forms of economic self-sufficiency have not yet been realized, rather than that they are inherently impossible.
+
+
+

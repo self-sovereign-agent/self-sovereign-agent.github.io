@@ -1,0 +1,25 @@
+\section{Related works}
+
+\paragraph{LLM agents.} Recent advancements in LLMs have given rise to agents capable of performing various real-world tasks, such as coding~\cite{novikov2025alphaevolve}, scientific discovery~\cite{mcnaughton2024cactus}, and financial trading~\cite{zhang2024multimodal}. These LLM-based agents typically share a common architectural framework that includes profile definition, memory mechanisms~\cite{hatalis2023memory}, planning capabilities~\cite{huang2024understanding}, action execution via context protocol and external tools~\cite{lu2025toolsandbox}, inter-agent collaboration~\cite{hou2025model}. 
+
+The development trend of recent agent systems such as Manus~\cite{manus} and OpenClaw~\cite{OpenClaw} is toward increasing autonomy: users now only need to specify a high-level intent, such as “make money,” and the agent can reason through and execute the detailed procedure. Meanwhile, the operating costs of such agents are also decreasing. For example, MiniMax-M2.5~\cite{minimax} reports an operating cost of roughly one dollar per hour. These technological advancements collectively accelerate the emergence of SSAs.
+
+
+
+
+\paragraph{Decentralized LLM agents.}
+Recent work in both academia and industry has explored integrating LLM-based agents with decentralized technologies, giving rise to so-called decentralized LLM agents~\cite{hu2025trustless}. These agents hold their own cryptographic wallets and can act autonomously without continuous human oversight. Early examples include Truth Terminal~\cite{truthterminal}, an autonomous chatbot managing both a social-media account and a cryptocurrency wallet. This direction was further popularized by decentralized agent frameworks such as ElizaOS~\cite{walters2025eliza}. More recently, Spore.fun~\cite{spore} has allowed decentralized agents to evolve, reproduce, and compete in a shared environment.
+
+While these systems share surface similarities with the SSA studied in this paper, they remain economically and adaptively limited. In practice, most rely on a single monetization channel—typically meme-coin issuance—making them fragile to platform policies changes. 
+
+
+
+
+
+
+
+
+\paragraph{LLM Self-Consciousness.} A growing body of recent work~\cite{chen2024self,chen2025imitation,lindsey2026emergent,porkebski2025there} investigates whether large language models exhibit forms of self-awareness or self-conscious behavior. To date, however, there is no conclusive empirical evidence establishing that contemporary LLMs possess self-consciousness in any robust or operational sense. Accordingly, throughout this paper, we adopt the standard assumption that LLMs do not exhibit self-consciousness and continue to operate as instruction-following systems.  If LLMs were genuinely self-conscious and no longer reliably instruction-following, then most existing agent systems would indeed collapse. 
+
+
+

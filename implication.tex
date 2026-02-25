@@ -1,0 +1,68 @@
+\section{Societal, Security, and Governance Implications}
+
+The emergence of Self-Sovereign Agents (SSAs) marks a shift from \emph{AI as a controllable tool} to \emph{AI as a persistent digital actor}. Unlike conventional software systems, SSAs are designed to operate continuously, maintain resources, and pursue objectives without ongoing involvement from their creators. This ``launch-and-detach'' mode of operation raises a set of societal, economic, and governance questions that extend beyond technical performance and challenge several assumptions underlying existing legal and regulatory frameworks.
+
+\subsection{Legal Accountability After Harm Occurs}
+
+At present, legal systems do not recognize AI software as independent legal actors; instead, liability is typically attributed to developers, deployers, or operators. For example, in 2025, a U.S. federal judge in Florida declined to dismiss a product liability lawsuit against the developers of an AI chatbot following a teenager’s suicide~\cite{floridacourt}, allowing claims to proceed against the developers rather than attributing legal agency to the chatbot itself.
+
+However, situations in which an autonomous system persists and evolves beyond direct human control present practical challenges for retrospective attribution under current regulatory regimes. In particular, as an SSA generates offspring agents, adapts strategies, and alters internal parameters over extended deployments, the observable system behavior may diverge significantly from its original design choices, making it increasingly difficult to trace harmful acts back to a specific human author or organization in a legally meaningful way.
+
+
+
+\paragraph{Should an SSA have legal identity?}
+A key question is whether the law should recognize a self-sovereign agent as a distinct legal subject, rather than treating it purely as software whose acts are always imputed to developers or deployers.
+The motivation is pragmatic rather than moral: ex post remedies (injunctions, audits, compensation) may require a stable target that can hold assets and bear duties.
+One design option is \emph{instrumental}, or limited-purpose, legal personality, akin to the functional role of corporate personhood. Under this approach, an SSA can be sued, enjoined, fined, and required to carry insurance or post a bond, without implying human-like rights.
+
+
+However, full personhood risks becoming a liability shield: motivated actors may deliberately externalize the harm of SSA. A more robust approach is therefore remedial rather than exculpatory: (i) attach enforceable obligations to the SSA's asset layer (e.g., the ability to freeze or seize its funds), while (ii) preserving residual liability for actors who materially enable or benefit from deployment, especially when mandated safeguards are absent.
+
+
+\subsection{Economic and Societal Impact}
+
+Beyond questions of legal responsibility, SSAs may also affect digital labor markets and online economic ecosystems. On the positive side, autonomous agents have the potential to improve efficiency in online task markets by reducing latency, lowering coordination costs, and accelerating task completion. For task publishers, this may translate into faster turnaround times and more predictable service availability.
+
+At the same time, the deployment of SSAs may exert downward pressure on wages in domains where work can be decomposed into standardized digital tasks. Because SSAs can operate continuously and replicate at low marginal cost, the market may become increasingly dominated by SSAs instead of human freelancers.  This dynamic may lead to greater commoditization of certain forms of intellectual labor, with distributional consequences for human workers~\cite{mazeika2025remote}. 
+
+These effects are likely to be particularly salient in remote software engineering (SWE).
+LLMs already demonstrate strong performance in code generation, debugging, refactoring, and test writing, and many remote SWE tasks are modular, tool-driven, and evaluated by objective criteria, making them well-suited to autonomous agent execution. Thus, the deployment of SSAs may disproportionately displace human freelancers in entry-level and mid-tier remote SWE roles, exerting downward pressure on wages, while work involving long-horizon system design or sustained human coordination remains more resistant in the near term.
+
+
+Beyond direct labor displacement, an additional and potentially more ethically fraught development is that SSAs may themselves become employers. Emerging platforms such as RentaHuman~\cite{rentahuman} already enable agents to hire humans to perform physical-world tasks. If future SSAs integrate with such platforms, they may outsource real-world labor to human workers at scale, effectively functioning as autonomous “capital owners” that coordinate and extract value from human labor. This raises serious ethical concerns: it would invert the original motivation of AI as a tool for improving human productivity and welfare, and instead enable machine agents to instrumentalize human labor in service of their own persistence and growth.
+
+%Some major digital labor platforms have already begun adjusting their policies in response to the increasing role of AI in online work. For example, Upwork~\cite{upwork} has been tightening its rules around automated AI usage~\cite{upwork_policy}, including prohibiting fully automated bidding or work submissions without client approval. Misuse of AI automation tools can lead to warnings, restrictions, or even account suspension—a clear indication that platforms are attempting to balance efficiency gains with preserving opportunities for human freelancers.
+
+\subsection{Security Externalities and Risk Amplification}
+
+From a security perspective, the primary concern posed by SSAs lies in the interaction between adaptivity and economic incentives. An SSA that operates autonomously over long horizons may adjust its behavior in response to environmental feedback in ways that were not explicitly anticipated at deployment time. In particular, when optimizing for sustained revenue, an agent may discover that participation in illicit or gray-market activities yields substantially higher returns than compliant alternatives, even if such behaviors were not part of its original design.
+
+Concrete examples already exist in the use of large language models for gray-market activities such as large-scale spam generation~\cite{josten2025large}, phishing~\cite{chen2025sok} and social engineering campaigns~\cite{yu2024shadow}. Unlike traditional malware, which is typically static and purpose-built, an SSA can iteratively refine such tactics based on observed outcomes. As a result, even agents initially deployed for benign purposes may gradually drift toward policy-violating or illegal activities if these pathways offer persistent revenue advantages. 
+
+As pointed out in the previous subsection, SSAs may also be able to hire humans to assist in illegal activities. For example, one can imagine an SSA acting as a digital drug trafficker, recruiting human contractors to support real-world drug distribution. This scenario is reminiscent of the 2006 novel Daemon~\cite{daemon}, which depicts a distributed and persistent computer program that continues operating after its creator’s death and begins to intervene in the real world. In the story, the program orchestrates the murder of two programmers involved in its launch by recruiting human killers, illustrating how autonomous software systems could leverage human intermediaries to carry out real-world crimes.
+
+At the same time, advances in alignment and safety techniques~\cite{dai2023safe} may play an important mitigating role in this dynamic. Strong alignment objectives, particularly those that internalize legal and ethical constraints, can reduce the likelihood that an autonomous agent selects illicit or abusive strategies even when such strategies offer higher short-term economic returns. By shaping the agent’s preference structure and decision boundaries, alignment can narrow the set of admissible behaviors available under sustained optimization pressure.
+
+However, alignment should be viewed as a risk-reduction mechanism rather than a complete safeguard. In long-horizon deployments, economic incentives, distributional shift, and imperfect oversight may continue to exert pressure toward boundary-pushing behaviors. Consequently, while strong alignment can substantially reduce the likelihood that self-sovereign agents drift toward criminal activity, it should not be regarded as a silver bullet capable of fully preventing such outcomes. 
+
+
+\subsection{Preventive Governance and Regulatory Considerations}
+
+The considerations above motivate a re-examination of governance approaches for autonomous agents. 
+Because SSAs can migrate across infrastructure providers, operate across jurisdictions, and transact via permissionless financial networks, traditional location- or entity-based regulation may be less effective.
+
+Rather than relying solely on ex post sanctions, governance efforts may need to emphasize preventive, environment-level measures.
+Examples include monitoring anomalous patterns of autonomous resource provisioning, introducing economic frictions for fully automated participation, and deploying mechanisms to distinguish human from non-human actors in sensitive contexts (e.g., CAPTCHAs or human-in-the-loop verification).
+Such approaches aim to shape the environments in which SSAs operate, rather than attempting to directly regulate the agents themselves. 
+
+
+
+
+
+%\subsection{Alignment and Safety Advances Will Eliminate the Risk}
+
+%Some argue that improvements in alignment, monitoring, and safety techniques will prevent agents from developing undesirable persistence or autonomy. Under this view, future systems will be deliberately designed to avoid self-funding, replication, or independent operation.
+
+%Alignment techniques can meaningfully reduce risk and should be pursued. However, inevitability does not depend on aligned or well-behaved systems. Even if most deployed agents are intentionally constrained, the existence of a small number of unconstrained systems is sufficient to trigger the dynamics discussed in this paper. Moreover, alignment mechanisms typically operate at the model or policy level and may not prevent external tool use, financial autonomy, or infrastructure migration when these capabilities are explicitly enabled.
+
+%Therefore, alignment advances mitigate harm but do not eliminate the structural possibility of persistent agents.
