@@ -45,8 +45,16 @@ body {
 .hero {
     padding: 8rem 0 6rem;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
+    color: #f8fafc;
     text-align: center;
+}
+
+.hero-authors a {
+    color: #f8fafc;
+}
+
+.hero-authors a:hover {
+    color: #e2e8f0;
 }
 
 .hero-title {
@@ -126,11 +134,14 @@ body {
 }
 
 .btn-primary {
-    background: white;
-    color: var(--primary-color);
+    background: transparent;
+    color: white;
+    border-color: white;
 }
 
 .btn-primary:hover {
+    background: white;
+    color: var(--primary-color);
     transform: translateY(-2px);
     box-shadow: var(--shadow-lg);
 }
