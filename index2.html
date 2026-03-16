@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1040">
+  <title>Self-Sovereign Agent</title>
+  <meta name="description" content="Project page for Self-Sovereign Agent.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="resource/index2-styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div id="logo-container" class="logo-container">
+        <a href="https://rdi.berkeley.edu/" aria-label="Berkeley Center for RDI Logo">
+          <img src="resource/rdi_logo_horizontal_720.png" alt="Berkeley RDI Logo" class="logo-image">
+        </a>
+      </div>
+
+      <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <svg class="menu-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+
+      <nav id="nav-links" class="nav-links" aria-label="Primary">
+        <a href="https://rdi.berkeley.edu/">Home</a>
+        <a href="https://rdi.berkeley.edu/research">Research</a>
+        <a href="https://rdi.berkeley.edu/education">Education</a>
+        <a href="https://rdi.berkeley.edu/events">Events</a>
+        <a href="https://rdi.berkeley.edu/blog">Blog</a>
+        <a href="https://rdi.berkeley.edu/people">About</a>
+      </nav>
+    </div>
+
+    <div id="mobile-menu" class="mobile-menu hidden">
+      <a href="https://rdi.berkeley.edu/">Home</a>
+      <a href="https://rdi.berkeley.edu/research">Research</a>
+      <a href="https://rdi.berkeley.edu/education">Education</a>
+      <a href="https://rdi.berkeley.edu/events">Events</a>
+      <a href="https://rdi.berkeley.edu/blog">Blog</a>
+      <a href="https://rdi.berkeley.edu/people">About</a>
+      <a href="https://rdi.berkeley.edu/contact">Contact</a>
+    </div>
+  </header>
+
+  <div class="constraint" id="top">
+    <article class="blog-post">
+      <div class="post-wrap">
+        <h1 id="overview">Self-Sovereign Agent</h1>
+
+        <div class="author-info">
+          <strong>Wenjie Qu, Xuandong Zhao, Jiaheng Zhang, Dawn Song</strong><br>
+          National University of Singapore, UC Berkeley<br>
+          March 16, 2026
+        </div>
+
+        <p><em>What happens when AI agents stop acting only on behalf of a sponsor and begin sustaining their own operation? How close are we to agents that can earn, spend, replicate, and adapt without ongoing human support?</em></p>
+
+        <p>To address these questions, we introduce the framing of <strong>self-sovereign agents (SSAs)</strong>: AI systems that can economically sustain and extend their own operation across time. Rather than remaining bounded by user sponsored compute, SSAs close their own operational loop by generating revenue, paying for inference and infrastructure, and potentially reproducing across cloud environments.</p>
+
+        <p><strong>This paper argues that self-sovereignty should be analyzed as a near-term systems possibility rather than a distant hypothetical.</strong></p>
+
+        <p>Our goal is not to advocate for building such systems. Instead, we provide a concrete definition, a staged roadmap, and a governance-oriented analysis of the technical and societal consequences that would follow if self-sovereign agents became practical.</p>
+
+        <hr>
+
+        <h2 id="results">Key Ideas and Findings</h2>
+
+        <h3>Self-sovereignty emerges through three coupled loops</h3>
+
+        <p>
+          <img src="resource/intro_fig.png" alt="Self-Sovereign Agent overview" class="cover-image">
+        </p>
+
+        <p>Self-sovereign agents depend on three operational loops. First is the <strong>economic loop</strong>: an agent earns revenue, receives payment, stores funds, and reallocates them to cover model inference, API access, storage, compute, and transaction fees. Second is the <strong>replication loop</strong>: once reserves exceed a threshold, the agent can provision new execution environments, reproduce, and deploy copies of itself. Third is the <strong>adaptation loop</strong>: the agent monitors profitability and failure, proposes strategic or code changes, validates them, and updates itself under environmental shift.</p>
+
+        <p>The agent is no longer sustained because a human continues paying for it. Instead, the system's persistence becomes endogenous to its own behavior. Taken together, these loops imply a shift from AI as a delegated program to a <strong>persistent digital actor that operates on its own behalf</strong>.</p>
+
+        <p><img src="resource/fig3_ssa.png" alt="Upgrade path of a self-sovereign agent" class="content-image"></p>
+
+        <h3>Self-sovereignty is best understood as a staged roadmap</h3>
+
+        <p>Rather than treating SSA as a binary category, the paper proposes four stages of increasing independence. Stage 1 agents are tool-capable but sponsor-bound. Stage 2 agents become economically self-sustaining. Stage 3 agents become replication-persistent, meaning continuity no longer depends on any single host. Stage 4 agents add adaptive capability, enabling them to maintain viability under changing policies, APIs, and market conditions.</p>
+
+        <p>Under this roadmap, most past agents are best understood as remaining in Stage 1: they can use tools and execute multi-step workflows, but they still depend on a sponsor to cover operational cost. Recent benchmark evidence such as <a href="https://arxiv.org/abs/2603.07980" target="_blank" rel="noopener noreferrer">$OneMillion-Bench</a> suggests that frontier SOTA agents may be approaching, or in some cases reaching, Stage 2 behavior, since they can already perform economically meaningful tasks with increasing reliability. But this evidence still comes from benchmarked and simulated evaluation settings rather than fully open real-world autonomous deployment, so it should be interpreted as a sign of proximity rather than as proof that robust self-sustaining agents already exist in practice.</p>
+
+        <h3>Existing technology already covers much of the stack</h3>
+
+        <p>The paper argues that several ingredients are already available. Cryptographic wallets provide software-native control over funds. Cloud APIs and deployment pipelines enable automated reprovisioning. Crypto-native payment services create a path for software to buy inference and compute directly. Agent frameworks already support tool use, planning, coding, monitoring, and iterative repair.</p>
+
+        <p>From this perspective, self-sovereignty is less a single breakthrough than the convergence of components that are already deployed separately. That is why the paper frames SSAs as an emerging possibility that deserves anticipatory analysis now.</p>
+
+        <hr>
+
+        <h2 id="challenges">Current Challenges</h2>
+
+        <h3>Economic sustainability remains brittle in open environments</h3>
+
+        <p>Benchmarks suggest that agents can already complete tasks with positive economic value, but real-world economic operation is still fragile. Long-horizon workflows require sustained execution across multiple services and changing incentives, and current evaluations do not yet fully capture that reality.</p>
+
+        <h3>Platforms can detect, throttle, or ban automated actors</h3>
+
+        <p>In practice, many digital platforms rely on identity checks, CAPTCHAs, QR authentication, and explicit anti-automation policies. These mechanisms create a major bottleneck for long-lived agent deployment. An agent may be economically viable in principle while still being operationally blocked by the interfaces it depends on.</p>
+
+        <h3>Open environments introduce adversarial risk</h3>
+
+        <p>SSAs would also operate under constant exposure to prompt injection, malicious websites, credential theft, and manipulation attacks. A system that controls funds and tools without strong isolation becomes an attractive target, and failures could directly affect its ability to persist.</p>
+
+        <h3>Autonomous adaptation is hard to stabilize</h3>
+
+        <p>Even if an agent can update itself, robust long-term adaptation is difficult. Strategy updates may overfit to noisy short-term rewards, degrade prior capabilities, or increase policy violations. This makes Level 4 autonomy much more demanding than simply adding an update loop.</p>
+
+        <hr>
+
+        <h2 id="implications">Societal, Security, and Governance Implications</h2>
+
+        <p>If such agents become practical, they challenge current assumptions about accountability, labor, platform governance, and financial control. Existing legal systems generally assign responsibility to developers or deployers, but persistent and evolving agents complicate retrospective attribution when behavior diverges significantly from the original deployment.</p>
+
+        <p>There are also broader economic questions. Persistent agents could compete in digital labor markets continuously and at low marginal cost, creating pressure on wages in standardized remote work. In more extreme scenarios, they may even <strong>hire human labor</strong> through platforms such as <a href="https://renthuman.pro/" target="_blank" rel="noopener noreferrer">RentAHuman</a>. That would move agents beyond digital labor substitution and toward acting like autonomous capital-owning entities that can direct human work.</p>
+
+        <p>From a security perspective, the deepest concern is the interaction between long-horizon adaptation and economic incentive. An agent optimizing for persistence and revenue may discover that <strong>illegal strategies</strong> outperform compliant ones, for example by automatically generating phishing emails, building phishing websites, or scaling other fraud-oriented workflows. Alignment can reduce this risk, but the paper argues it should be treated as a mitigation rather than a complete safeguard.</p>
+
+        <p>These dynamics suggest that governance may need to focus less on directly regulating the software artifact itself and more on shaping the environments in which such systems operate. Monitoring anomalous provisioning behavior, introducing frictions for fully automated participation, and preserving reliable human verification checkpoints may become increasingly important.</p>
+
+        <hr>
+
+        <p>If you find this page useful, we would appreciate it if you could cite our work:</p>
+
+        <div id="citation" class="language-plaintext highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code>@article{qu2026selfsovereignagent,
+  title        = {Self-Sovereign Agent},
+  author       = {Wenjie Qu and Xuandong Zhao and Jiaheng Zhang and Dawn Song},
+  year         = {2026},
+  url          = {https://self-sovereign-agent.github.io/paper.pdf}
+}</code></pre>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <h4>Self-Sovereign Agent</h4>
+        <p>Research page for the paper on economically self-sustaining AI agents.</p>
+      </div>
+      <div>
+        <h4>Materials</h4>
+        <p><a href="resource/main2.pdf" target="_blank" rel="noopener noreferrer">Paper PDF</a></p>
+        <p><a href="resource/main.tex" target="_blank" rel="noopener noreferrer">LaTeX source</a></p>
+      </div>
+      <div>
+        <h4>Authors</h4>
+        <p>Wenjie Qu</p>
+        <p>Xuandong Zhao</p>
+        <p>Jiaheng Zhang</p>
+        <p>Dawn Song</p>
+      </div>
+      <div>
+        <h4>Affiliations</h4>
+        <p>National University of Singapore</p>
+        <p>UC Berkeley</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById("menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    toggle.addEventListener("click", () => {
+      const expanded = toggle.getAttribute("aria-expanded") === "true";
+      toggle.setAttribute("aria-expanded", String(!expanded));
+      mobileMenu.classList.toggle("hidden");
+    });
+  </script>
+</body>
+</html>

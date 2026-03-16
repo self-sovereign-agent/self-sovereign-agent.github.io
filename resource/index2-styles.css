@@ -1,0 +1,291 @@
+body {
+  margin: 0;
+  background: #ffffff;
+  color: #1f2937;
+  font-family: "Lato", sans-serif;
+}
+
+a {
+  color: #003262;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #fdb515;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  background: #ffffff;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.08);
+  z-index: 50;
+}
+
+.header-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+}
+
+.logo-container {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.logo-image {
+  height: 4rem;
+  width: auto;
+  max-width: 100%;
+  display: block;
+}
+
+.nav-links,
+.mobile-menu {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a,
+.mobile-menu a {
+  text-decoration: none;
+  color: #4b5563;
+}
+
+.nav-links a:hover,
+.mobile-menu a:hover {
+  color: #1e3a8a;
+}
+
+.menu-toggle {
+  display: none;
+  border: 0;
+  background: transparent;
+  color: #4b5563;
+  font: inherit;
+  cursor: pointer;
+  padding: 0;
+}
+
+.menu-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.mobile-menu {
+  display: none;
+  padding: 0 1.5rem 1rem;
+}
+
+.mobile-menu.hidden {
+  display: none;
+}
+
+.mobile-menu a {
+  display: block;
+  padding: 0.35rem 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.constraint {
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+
+.post-wrap {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.blog-post {
+  line-height: 1.75;
+}
+
+.blog-post h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 2rem 0 1rem;
+  line-height: 1.2;
+  color: #003262;
+}
+
+.blog-post h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 2rem 0 1rem;
+  color: #003262;
+}
+
+.blog-post h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 1.5rem 0 0.75rem;
+  color: #003262;
+}
+
+.blog-post p {
+  margin: 1rem 0;
+  font-size: 1.1rem;
+}
+
+.blog-post ul,
+.blog-post ol {
+  margin: 1rem 0;
+  padding-left: 2rem;
+}
+
+.blog-post li {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.blog-post img {
+  max-width: 80%;
+  height: auto;
+  margin: 2rem auto;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.blog-post .cover-image {
+  width: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.blog-post blockquote {
+  border-left: 4px solid #fdb515;
+  padding-left: 1.5rem;
+  margin: 1.5rem 0;
+  color: #555555;
+  font-style: italic;
+}
+
+.blog-post pre {
+  background-color: #f4f4f4;
+  padding: 1rem;
+  border-radius: 5px;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+}
+
+.blog-post pre code {
+  background-color: transparent;
+  padding: 0;
+}
+
+.blog-post .author-info {
+  font-size: 1rem;
+  color: #666666;
+  margin: 1rem 0 2rem;
+  line-height: 1.6;
+}
+
+.blog-post strong {
+  font-weight: 600;
+  color: #000000;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #e5e7eb;
+  margin: 2rem 0;
+}
+
+.site-footer {
+  background: #111827;
+  color: #d1d5db;
+  font-size: 0.875rem;
+  padding: 2.5rem 1.5rem;
+}
+
+.footer-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.site-footer h4 {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 0.75rem;
+}
+
+.site-footer p {
+  margin: 0.35rem 0;
+  line-height: 1.6;
+}
+
+.site-footer a {
+  color: #d1d5db;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  color: #ffffff;
+}
+
+@media (max-width: 640px) {
+  .header-inner {
+    padding: 1rem;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+
+  .constraint {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .blog-post h1 {
+    font-size: 2rem;
+  }
+
+  .blog-post h2 {
+    font-size: 1.7rem;
+  }
+
+  .blog-post h3 {
+    font-size: 1.3rem;
+  }
+
+  .blog-post p,
+  .blog-post li {
+    font-size: 1rem;
+  }
+
+  .blog-post img {
+    max-width: 100%;
+  }
+
+  .footer-inner {
+    grid-template-columns: 1fr;
+  }
+}
