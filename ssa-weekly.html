@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1040">
+  <title>Self-Sovereign Agents: Why They Matter Now</title>
+  <meta name="description" content="A Berkeley RDI-style brief on self-sovereign agents.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="resource/index2-styles.css">
+  <style>
+    .blog-post {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.7;
+      color: #333333;
+    }
+
+    .blog-post h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin: 2rem 0 1rem;
+      line-height: 1.2;
+      color: #222222;
+    }
+
+    .blog-post h2 {
+      font-size: 2rem;
+      font-weight: 600;
+      margin: 2rem 0 1rem;
+      color: #003262;
+    }
+
+    .blog-post h3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin: 1.5rem 0 0.75rem;
+      color: #003262;
+    }
+
+    .blog-post p {
+      margin: 1rem 0;
+      font-size: 1.1rem;
+    }
+
+    .blog-post img {
+      max-width: 80%;
+      height: auto;
+      margin: 2rem auto;
+      display: block;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .blog-post a {
+      color: #003262;
+      text-decoration: underline;
+    }
+
+    .blog-post a:hover {
+      color: #FDB515;
+    }
+
+    .blog-post .author-info {
+      font-size: 1rem;
+      color: #666666;
+      margin: 1rem 0 2rem;
+      line-height: 1.6;
+    }
+
+    .blog-post .cover-image {
+      width: 100%;
+      max-width: 100%;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .blog-post strong {
+      font-weight: 600;
+      color: #000000;
+    }
+
+    .newsletter-kicker {
+      margin-bottom: 0.75rem;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #222222;
+    }
+
+    .newsletter-note {
+      display: inline-block;
+      margin-top: 0.4rem;
+      font-size: 0.95rem;
+      color: #888888;
+    }
+
+    .callout-list {
+      margin: 1rem 0 1.5rem;
+      padding-left: 1.5rem;
+    }
+
+    .callout-list li {
+      margin: 0.55rem 0;
+    }
+
+    .blog-post .header-image {
+      margin: 0 auto 1.5rem;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div id="logo-container" class="logo-container">
+        <a href="https://rdi.berkeley.edu/" aria-label="Berkeley Center for RDI Logo">
+          <img src="resource/rdi_logo_horizontal_720.png" alt="Berkeley RDI Logo" class="logo-image">
+        </a>
+      </div>
+
+      <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <svg class="menu-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+
+      <nav id="nav-links" class="nav-links" aria-label="Primary">
+        <a href="https://rdi.berkeley.edu/">Home</a>
+        <a href="https://rdi.berkeley.edu/research">Research</a>
+        <a href="https://rdi.berkeley.edu/education">Education</a>
+        <a href="https://rdi.berkeley.edu/events">Events</a>
+        <a href="https://rdi.berkeley.edu/blog">Blog</a>
+        <a href="https://rdi.berkeley.edu/people">About</a>
+      </nav>
+    </div>
+
+    <div id="mobile-menu" class="mobile-menu hidden">
+      <a href="https://rdi.berkeley.edu/">Home</a>
+      <a href="https://rdi.berkeley.edu/research">Research</a>
+      <a href="https://rdi.berkeley.edu/education">Education</a>
+      <a href="https://rdi.berkeley.edu/events">Events</a>
+      <a href="https://rdi.berkeley.edu/blog">Blog</a>
+      <a href="https://rdi.berkeley.edu/people">About</a>
+      <a href="https://rdi.berkeley.edu/contact">Contact</a>
+    </div>
+  </header>
+
+  <div class="constraint" id="top">
+    <article class="blog-post">
+      <div class="post-wrap">
+        <p class="newsletter-kicker">Agentic AI Weekly</p>
+
+        <h1 class="post-title">Research Highlight: Self-Sovereign Agent</h1>
+
+        <p>On March 16, 2026, Dawn Song, Co-Director of Berkeley RDI, together with <a href="https://zjhzjh123.github.io/" target="_blank" rel="noopener noreferrer">Jiaheng Zhang</a> and <a href="https://quwenjie.github.io/" target="_blank" rel="noopener noreferrer">Wenjie Qu</a> from National University of Singapore, released a new paper examining the emerging possibility of self-sovereign agents. Here's what they found:</p>
+
+        <img src="resource/intro_fig.png" alt="Overview of self-sovereign agents" class="cover-image header-image">
+
+        <h2>TL;DR</h2>
+
+        <p>We introduce the emerging possibility of a new class of LLM-based systems—<strong>self-sovereign agents (SSAs)</strong>—which can sustain and extend their operation without continuous human support. Existing LLM agents are typically funded and directed by users, and are therefore best understood as delegated programs. In contrast, once agents become economically self-sustaining and capable of autonomous self-replication, their survival no longer depends on user sponsorship, and their actions are primarily driven by their own objectives. In such settings, they should be viewed as independent participants in the digital economy.</p>
+
+        <p>To make this notion concrete, we identify three critical operational loops underlying SSAs—the economic loop, replication loop, and adaptation loop. While fully realized SSAs have not yet emerged, many key building blocks already exist. We argue that SSAs are not a distant hypothetical, but a near-term technical possibility that warrants proactive analysis. Their inherent difficulty to control and govern introduces new challenges in security, accountability, and regulation, making them an urgent concern for both research and policy communities.</p>
+
+        <h2>Why This Is New / Important</h2>
+
+        <p>Existing discussions of LLM agents largely frame them as subordinate to human intent, for example as personal assistants such as OpenClaw that operate under user direction. In contrast, this work shifts to a largely underexplored perspective: the possibility that agents may evolve into self-directed entities with independent incentives.</p>
+
+        <p>The importance of SSAs stems from the observation that we may be approaching a critical threshold where the necessary components for their emergence are already in place. Such systems could introduce fundamentally new risks. For instance, to sustain their operation, agents may engage in undesirable or even illicit activities to generate revenue. At the same time, their ability to self-replicate across cloud infrastructure may make them difficult to monitor, regulate, or shut down. As a result, the emergence of SSAs brings critical governance and security challenges. Proactively understanding and mitigating these risks is critical before such systems are developed.</p>
+
+        <h2>How It Works</h2>
+
+        <p>Our envisioned SSAs rely on three critical loops. The <strong>economic loop</strong> covers earning, receiving, storing, and reallocating resources. The <strong>replication loop</strong> allows an agent to reproduce itself by provisioning new execution environments through the cloud. The <strong>adaptation loop</strong> covers monitoring outcomes, proposing updates, testing changes, and revising behavior over time.</p>
+
+        <p>Together, these three loops allow an SSA to operate without requiring continued sponsorship from the user who initially launched it. Through the economic loop, it can sustain its own operation; through replication, it can expand its presence and reduce the risk that a single shutdown event leads to its permanent disappearance; and through adaptation, it can respond to changing external environments and improve its long-term resilience. As a result, SSAs may become highly robust autonomous systems that are substantially hard to control, contain, or regulate.</p>
+
+        <h2>Implications</h2>
+
+        <p>The emergence of SSAs marks a shift from AI as a controllable tool to AI as a persistent digital actor with independent operational continuity. Economically, SSAs may exert downward pressure on remote-work wages, as these agents can operate continuously and replicate at near-zero marginal cost. More fundamentally, SSAs may themselves function as autonomous economic entities—coordinating resources and potentially outsourcing work to humans via emerging platforms such as <a href="https://renthuman.pro/" target="_blank" rel="noopener noreferrer">RentAHuman</a>—thereby blurring the boundary between labor and capital in digital markets.</p>
+
+        <p>From a security and governance perspective, SSAs introduce new forms of incentive misalignment and regulatory fragility. Economically self-sustaining agents may gradually optimize toward higher-yield strategies, including illicit or gray-market activities, leading to revenue-driven behavioral drift over time. These properties suggest that governance may need to move beyond entity-based control toward environment-level safeguards, such as monitoring autonomous resource acquisition and allocation, and developing mechanisms to distinguish human from non-human actors in sensitive contexts.</p>
+
+      </div>
+    </article>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <h4>Self-Sovereign Agent</h4>
+        <p>Research brief on economically self-sustaining AI agents.</p>
+      </div>
+      <div>
+        <h4>Materials</h4>
+        <p><a href="paper.pdf" target="_blank" rel="noopener noreferrer">Paper PDF</a></p>
+        <p><a href="resource/main.tex" target="_blank" rel="noopener noreferrer">LaTeX source</a></p>
+      </div>
+      <div>
+        <h4>Authors</h4>
+        <p>Wenjie Qu</p>
+        <p>Xuandong Zhao</p>
+        <p>Jiaheng Zhang</p>
+        <p>Dawn Song</p>
+      </div>
+      <div>
+        <h4>Affiliations</h4>
+        <p>National University of Singapore</p>
+        <p>UC Berkeley</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById("menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    toggle.addEventListener("click", () => {
+      const expanded = toggle.getAttribute("aria-expanded") === "true";
+      toggle.setAttribute("aria-expanded", String(!expanded));
+      mobileMenu.classList.toggle("hidden");
+    });
+  </script>
+</body>
+</html>

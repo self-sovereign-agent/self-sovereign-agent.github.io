@@ -121,6 +121,10 @@ a:hover {
   color: #003262;
 }
 
+.blog-post .post-title {
+  margin-top: 0;
+}
+
 .blog-post h2 {
   font-size: 2rem;
   font-weight: 600;
@@ -165,6 +169,10 @@ a:hover {
   max-width: 100%;
   object-fit: cover;
   border-radius: 8px;
+}
+
+.blog-post .header-image {
+  margin: 0 auto 1.5rem;
 }
 
 .blog-post blockquote {
