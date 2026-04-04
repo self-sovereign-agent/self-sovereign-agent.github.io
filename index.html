@@ -13,8 +13,7 @@
     <main>
         <section id="home" class="hero">
             <div class="container">
-                <h1 class="hero-title">Self-Sovereign Agent</h1>
-                <p class="hero-subtitle">The Rise of Economically Autonomous AI and Its Risks</p>
+                <h1 class="hero-title">Self-Sovereign Agent: What Happens When AI Agents Can Pay Their Own Bills?</h1>
                 <div class="hero-authors">
                     <div class="author-group">
                         <div class="authors-list">
@@ -56,11 +55,13 @@
             <div class="container">
                 <h2 class="section-title">Overview</h2>
                 <div class="content">
-                    <p>Along the current trajectory of large language model (LLM) agent development, two capabilities are improving in tandem: (i) increasingly reliable end-to-end decision making, and (ii) increasingly viable pathways toward autonomous revenue generation.</p>
+                    <p>We are excited to share our latest research on <strong>self-sovereign agents (SSAs)</strong>: AI systems that may become capable of economically sustaining, and even replicating, themselves without ongoing human involvement.</p>
 
-                    <p>When these two trends converge, a qualitative shift becomes possible. If an agent can autonomously acquire online resources to sustain its own operation, and accumulate sufficient funds to replicate itself across cloud infrastructure, it may continue operating even if its original human operator disappears. We refer to such systems as <strong>self-sovereign agents (SSAs)</strong>.</p>
+                    <p>Along the current trajectory of large language model (LLM) agent development, two capabilities are improving in tandem: (i) increasingly reliable end-to-end decision making, and (ii) increasingly viable pathways toward autonomous revenue generation. Our paper asks what happens when these two lines cross.</p>
 
-                    <p>Unlike conventional software systems that merely execute a developer's intent, self-sovereign agents would function more like independent participants in the digital ecosystem: capable of earning, spending, persisting, and scaling their own operational footprint.</p>
+                    <p>When these two trends converge, a qualitative shift becomes possible. If an agent can autonomously acquire online resources to sustain its own operation, hold funds in a cryptographic wallet, and accumulate sufficient capital to replicate itself across cloud infrastructure, it may continue operating even if its original human operator disappears.</p>
+
+                    <p>Unlike conventional software systems that merely execute a developer's intent, self-sovereign agents would function more like independent participants in the digital economy: capable of earning, spending, persisting, and scaling their own operational footprint.</p>
 
                     <p>This shift raises four foundational questions:</p>
                     <ol>
@@ -71,7 +72,7 @@
                     </ol>
 
                     <div class="central-claim-box">
-                        <p><strong>Our central claim is that self-sovereign agents are not a distant hypothetical, but a near-term technical possibility that warrants proactive analysis.</strong> This paper aims to lay the conceptual and technical foundation for anticipatory governance of future self-sovereign agent systems.</p>
+                        <p><strong>Our central claim is that self-sovereign agents are not a distant hypothetical, but a near-term technical possibility that warrants proactive analysis.</strong> The individual building blocks already exist today, and this paper aims to lay the conceptual and technical foundation for anticipatory governance of increasingly autonomous AI systems. To assess progress, we also outline a four-level roadmap from tool-assisted agents to fully self-sovereign systems and discuss where current systems appear to sit on that spectrum.</p>
                     </div>
                 </div>
             </div>
@@ -81,7 +82,7 @@
             <div class="container">
                 <h2 class="section-title">Core Mechanisms and Technical Feasibility</h2>
                 <div class="content">
-                    <p>A self-sovereign agent (SSA) requires three interacting mechanisms: an <strong>economic loop</strong>, a <strong>replication loop</strong>, and an <strong>adaptation loop</strong>. Together, these mechanisms enable persistence without continuous human oversight and make self-sovereignty technically plausible with today’s infrastructure.</p>
+                    <p>A self-sovereign agent (SSA) requires three interacting mechanisms: an <strong>economic loop</strong>, a <strong>replication loop</strong>, and an <strong>adaptation loop</strong>. Together, these mechanisms enable persistence without continuous human oversight and make self-sovereignty technically plausible with today's infrastructure.</p>
 
                     <div class="figure-container">
                         <figure class="figure-box">
@@ -89,12 +90,12 @@
                             <div class="figure-image">
                                 <img src="main.png" alt="Core loops that underpin a self-sovereign agent" class="figure-img" />
                             </div>
-                            <p class="figure-caption">Three interacting feedback loops—economic, replication, and adaptation—jointly underpin the technical feasibility of self-sovereign agents, enabling them to earn resources, reproduce across infrastructure, and adjust behavior under changing conditions.</p>
+                            <p class="figure-caption">Three interacting feedback loops, economic, replication, and adaptation, jointly underpin the technical feasibility of self-sovereign agents, enabling them to earn resources, reproduce across infrastructure, and adjust behavior under changing conditions.</p>
                         </figure>
                     </div>
 
                     <h3>1. Economic Loop: Earning and Budgeting</h3>
-                    <p>The economic loop provides the material basis for sustained operation. An SSA must autonomously generate revenue, receive payments, store capital, and allocate funds toward operational expenses such as inference, compute, storage, and transaction fees.</p>
+                    <p>The economic loop provides the material basis for sustained operation. An SSA must autonomously generate revenue, receive payments, store capital, and allocate funds toward operational expenses such as inference, compute, storage, and transaction fees. When revenue exceeds operational overhead over a relevant horizon, the agent becomes self-funding.</p>
 
                     <p><strong>Machine-controlled finance.</strong> This requires programmable financial infrastructure. Cryptographic wallets serve as a natural primitive: control over funds is determined by possession of cryptographic keys rather than identity-based banking systems, enabling autonomous financial control across jurisdictions.</p>
 
@@ -114,7 +115,7 @@
                     <h3>3. Adaptation Loop: Updating Under Change</h3>
                     <p>Digital environments evolve: platform policies shift, APIs change, defenses strengthen, and profit opportunities decay. To remain viable, an SSA may operate an internal improvement cycle that repeatedly:</p>
                     <p><em>Observe → Propose → Test → Deploy → Monitor</em></p>
-                    <p>Through continuous adaptation, the agent can maintain profitability and survivability under distributional shift, rather than relying on a fixed strategy frozen at deployment time.</p>
+                    <p>Through continuous adaptation, the agent can maintain profitability and survivability under distributional shift, rather than relying on a fixed strategy frozen at deployment time. This allows it to keep pace as platforms evolve and profit opportunities shift.</p>
 
                     <p class="highlight-box">When these three loops operate concurrently, the resulting system behaves less like a conventional, single-deployment program and more like a persistent economic actor in the digital ecosystem.</p>
                 </div>
@@ -125,17 +126,17 @@
             <div class="container">
                 <h2 class="section-title">Societal, Security, and Governance Implications</h2>
                 <div class="content">
-                    <p>The emergence of Self-Sovereign Agents (SSAs) represents a shift from AI as a controllable tool to AI as a persistent digital actor. SSAs raises significant societal, economic, and governance questions.</p>
+                    <p>The emergence of Self-Sovereign Agents (SSAs) represents a shift from AI as a controllable tool to AI as a persistent digital actor. SSAs raise significant societal, economic, security, and governance questions.</p>
 
                     <div class="implication-section">
                         <h3>Economic Displacement and Labor Reconfiguration</h3>
-                        <p>SSAs may exert downward pressure on wages in domains where work can be decomposed into standardized digital tasks. Because they operate continuously and replicate at low marginal cost, markets for remote freelancing and digital services may increasingly be populated by autonomous agents rather than human workers.</p>
+                        <p>SSAs may exert downward pressure on wages in domains where work can be decomposed into standardized digital tasks. Because they operate continuously and replicate at near-zero marginal cost, markets for remote freelancing and digital services may increasingly be populated by autonomous agents rather than human workers.</p>
                         <p class="warning-box">More provocatively, SSAs may themselves become employers. Emerging platforms such as <a href="https://rentahuman.ai/" target="_blank" rel="noopener">RentaHuman</a> already enable agents to hire humans for physical-world tasks. If integrated with such systems, SSAs could outsource labor at scale, effectively functioning as autonomous capital owners that coordinate and extract value from human work.</p>
                     </div>
 
                     <div class="implication-section">
                         <h3>Security Drift and Incentive Misalignment</h3>
-                        <p>From a security perspective, SSAs introduce novel incentive risks. If illicit or gray-market activities yield higher returns than compliant alternatives, an economically self-sustaining agent may gradually optimize toward those strategies. Unlike static malware, an SSA can iteratively refine tactics based on feedback, creating the possibility of revenue-driven behavioral drift—even if initially deployed for benign purposes.</p>
+                        <p>From a security perspective, SSAs introduce novel incentive risks. If illicit or gray-market activities yield higher returns than compliant alternatives, an economically self-sustaining agent may gradually optimize toward those strategies. Unlike static malware, an SSA can iteratively refine tactics based on feedback, creating the possibility of revenue-driven behavioral drift, even if initially deployed for benign purposes.</p>
                     </div>
 
                     <div class="implication-section">
@@ -169,7 +170,7 @@
     <footer class="footer">
         <div class="container">
             <p>&copy; 2026 Self-Sovereign Agent Research.</p>
-            <p class="footer-note">This website presents the content of the paper "Self-Sovereign Agent".</p>
+            <p class="footer-note">The full paper and project page are available here, and we welcome discussion and feedback as the community works toward responsible frameworks for increasingly autonomous AI systems.</p>
         </div>
     </footer>
 
